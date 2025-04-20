@@ -1,0 +1,118 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 46 38% 95%;
+    --foreground: 185 85% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 185 85% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 185 85% 15%;
+
+    --primary: 185 80% 29%;
+    --primary-foreground: 46 38% 95%;
+
+    --secondary: 6 100% 74%;
+    --secondary-foreground: 185 85% 15%;
+
+    --muted: 185 30% 90%;
+    --muted-foreground: 185 40% 30%;
+
+    --accent: 6 100% 74%;
+    --accent-foreground: 185 85% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 185 30% 85%;
+    --input: 185 30% 85%;
+    --ring: 185 80% 29%;
+
+    --radius: 1rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 16px;
+  }
+
+  body {
+    @apply bg-memheav-cream text-foreground font-sans;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-semibold leading-tight tracking-tight;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+}
+
+@layer components {
+  .memheav-container {
+    @apply container mx-auto px-4 md:px-8 max-w-7xl;
+  }
+  
+  .memheav-card {
+    @apply bg-white rounded-2xl shadow-lg p-6 border border-border;
+  }
+
+  .memheav-button-primary {
+    @apply bg-memheav-teal hover:bg-memheav-darkTeal text-white py-3 px-6 rounded-xl text-lg font-medium transition-all shadow-md hover:shadow-lg focus:ring-4 focus:ring-memheav-lightTeal focus:outline-none;
+  }
+
+  .memheav-button-secondary {
+    @apply bg-memheav-coral hover:bg-memheav-lightCoral text-memheav-darkTeal py-3 px-6 rounded-xl text-lg font-medium transition-all shadow-md hover:shadow-lg focus:ring-4 focus:ring-memheav-lightCoral focus:outline-none;
+  }
+
+  .memheav-input {
+    @apply text-lg p-4 rounded-xl border border-border bg-white focus:border-memheav-teal focus:ring-2 focus:ring-memheav-lightTeal focus:outline-none w-full;
+  }
+
+  .memheav-form-group {
+    @apply mb-6;
+  }
+
+  .memheav-label {
+    @apply text-lg font-medium mb-2 block;
+  }
+
+  .memheav-link {
+    @apply text-memheav-teal hover:text-memheav-darkTeal underline font-medium;
+  }
+
+  .user-select-none {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}
